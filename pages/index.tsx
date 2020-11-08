@@ -10,9 +10,11 @@ const Home = () => {
           <div className={styles.logo}>
             Pressliner <div className={styles.slogan}>The modern newspaper</div>
           </div>
-
           <div className={styles.weather}>Weather: 19 C. Mostly Sunny</div>
         </header>
+        <div className={styles.categories}>
+          Popular | Politics | Sports | Economy | Technology | Gaming | Health | Food | Travel | Arts | Science | Media
+        </div>
         <main className={styles.main}>Headline</main>
       </div>
     </Layout>
