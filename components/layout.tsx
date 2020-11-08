@@ -19,18 +19,6 @@ const Layout = ({ children, title = 'Pressliner' }: Props) => (
     <header className={styles.header}>
       <nav>
         <Link href="/">Home</Link>
-        <Link href="/profile">
-          <a>Profile</a>
-        </Link>
-        <Link href="/login">
-          <a>Login</a>
-        </Link>
-        <Link href="/signup">
-          <a>Sign up</a>
-        </Link>
-        <Link href="/settings">
-          <a>Settings</a>
-        </Link>
         <Link href="/explore">
           <a>Explore</a>
         </Link>
@@ -42,6 +30,18 @@ const Layout = ({ children, title = 'Pressliner' }: Props) => (
         </Link>
         <Link href="/create">
           <a>Create</a>
+        </Link>
+        <Link href="/login">
+          <a>Login</a>
+        </Link>
+        <Link href="/signup">
+          <a>Sign up</a>
+        </Link>
+        <Link href="/profile">
+          <a>Profile</a>
+        </Link>
+        <Link href="/settings">
+          <a>Settings</a>
         </Link>
       </nav>
     </header>
