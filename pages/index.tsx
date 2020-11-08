@@ -1,7 +1,9 @@
+import { InferGetStaticPropsType } from 'next';
+
 import Layout from '@components/layout';
 import styles from '@styles/index.module.scss';
 
-const Home = () => {
+const Home = ({ categories }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
       <div className={styles.container}>
@@ -13,12 +15,34 @@ const Home = () => {
           <div className={styles.weather}>Weather: 19 C. Mostly Sunny</div>
         </header>
         <div className={styles.categories}>
-          Popular | Politics | Sports | Economy | Technology | Gaming | Health | Food | Travel | Arts | Science | Media
+          {categories.map((category: Category) => {
+            return (
+              <span key={category.id} className={styles.category}>
+                {category.name}
+              </span>
+            );
+          })}
         </div>
         <main className={styles.main}>Headline</main>
       </div>
     </Layout>
   );
+};
+
+type Category = {
+  id: string;
+  name: string;
+};
+
+export const getStaticProps = async () => {
+  const res = await fetch('http://localhost:3000/api/categories');
+  const categories: Category[] = await res.json();
+
+  return {
+    props: {
+      categories,
+    },
+  };
 };
 
 export default Home;
