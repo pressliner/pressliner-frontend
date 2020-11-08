@@ -1,12 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital@1&display=swap');
 
 .header {
   width: 100%;
-  padding: 12px;
-  font-family: 'Playfair Display SC', serif;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  font-size: 54px;
+  padding: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .logo {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 54px;
+
+    .slogan {
+      font-size: 18px;
+      font-style: italic;
+      font-family: 'Spectral', serif;
+    }
+  }
+
+  .location,
+  .weather {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .categories {
+  }
 }
 
 .main {
