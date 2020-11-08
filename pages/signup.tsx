@@ -1,9 +1,11 @@
 import Layout from '../components/layout';
 
-export default () => {
+const Signup = () => {
   return (
     <Layout>
       <main>Sign Up page.</main>
     </Layout>
   );
 };
+
+export default Signup;

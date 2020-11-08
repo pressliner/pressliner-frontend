@@ -1,9 +1,11 @@
 import Layout from '../components/layout';
 
-export default () => {
+const Profile = () => {
   return (
     <Layout>
       <main>Profile page.</main>
     </Layout>
   );
 };
+
+export default Profile;

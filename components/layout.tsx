@@ -1,13 +1,14 @@
 import React, { ReactNode } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import styles from './layout.module.scss';
 
 type Props = {
   children?: ReactNode;
   title?: string;
 };
 
-export default ({ children, title = 'Pressliner' }: Props) => (
+const Layout = ({ children, title = 'Pressliner' }: Props) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -15,7 +16,7 @@ export default ({ children, title = 'Pressliner' }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <header>
+    <header className={styles.header}>
       <nav>
         <Link href="/">Home</Link>
         <Link href="/profile">
@@ -47,3 +48,5 @@ export default ({ children, title = 'Pressliner' }: Props) => (
     {children}
   </div>
 );
+
+export default Layout;

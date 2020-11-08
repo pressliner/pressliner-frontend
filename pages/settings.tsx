@@ -1,9 +1,11 @@
 import Layout from '../components/layout';
 
-export default () => {
+const Settings = () => {
   return (
     <Layout>
       <main>Settings page.</main>
     </Layout>
   );
 };
+
+export default Settings;

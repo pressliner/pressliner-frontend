@@ -1,7 +1,7 @@
 import Layout from '../components/layout';
 import styles from '../styles/Home.module.scss';
 
-export default () => {
+const Home = () => {
   return (
     <Layout>
       <div className={styles.container}>
@@ -10,3 +10,5 @@ export default () => {
     </Layout>
   );
 };
+
+export default Home;

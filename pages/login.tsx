@@ -1,9 +1,11 @@
 import Layout from '../components/layout';
 
-export default () => {
+const Login = () => {
   return (
     <Layout>
       <main>Login page.</main>
     </Layout>
   );
 };
+
+export default Login;
