@@ -1,5 +1,9 @@
-import Head from "next/head";
+import Layout from '../components/layout';
 
-export default function Profile() {
-  return <h1>Profile page</h1>;
-}
+export default () => {
+  return (
+    <Layout>
+      <main>Profile page.</main>
+    </Layout>
+  );
+};

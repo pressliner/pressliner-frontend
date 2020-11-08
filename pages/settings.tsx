@@ -1,5 +1,9 @@
-import Head from "next/head";
+import Layout from '../components/layout';
 
-export default function Settings() {
-  return <h1>Settings page</h1>;
-}
+export default () => {
+  return (
+    <Layout>
+      <main>Settings page.</main>
+    </Layout>
+  );
+};

@@ -1,5 +1,9 @@
-import Head from "next/head";
+import Layout from '../components/layout';
 
-export default function Discover() {
-  return <h1>Discover page</h1>;
-}
+export default () => {
+  return (
+    <Layout>
+      <main>Discover page.</main>
+    </Layout>
+  );
+};

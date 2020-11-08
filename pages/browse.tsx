@@ -1,5 +1,9 @@
-import Head from "next/head";
+import Layout from '../components/layout';
 
-export default function Browse() {
-  return <h1>Browse page</h1>;
-}
+export default () => {
+  return (
+    <Layout>
+      <main>Browse page.</main>
+    </Layout>
+  );
+};

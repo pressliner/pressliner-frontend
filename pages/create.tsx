@@ -1,5 +1,9 @@
-import Head from "next/head";
+import Layout from '../components/layout';
 
-export default function Create() {
-  return <h1>Create page</h1>;
-}
+export default () => {
+  return (
+    <Layout>
+      <main>Create page.</main>
+    </Layout>
+  );
+};

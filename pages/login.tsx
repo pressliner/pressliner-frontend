@@ -1,5 +1,9 @@
-import Head from "next/head";
+import Layout from '../components/layout';
 
-export default function Login() {
-  return <h1>Login page</h1>;
-}
+export default () => {
+  return (
+    <Layout>
+      <main>Login page.</main>
+    </Layout>
+  );
+};
