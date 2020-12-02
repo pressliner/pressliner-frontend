@@ -1,9 +1,9 @@
-import { InferGetStaticPropsType } from 'next';
+import { InferGetServerSidePropsType, GetServerSideProps } from 'next';
 
 import Layout from '@components/layout';
 import styles from '@styles/index.module.scss';
 
-const Home = ({ categories }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home = ({ categories }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <Layout>
       <div className={styles.container}>
@@ -34,8 +34,8 @@ type Category = {
   name: string;
 };
 
-export const getStaticProps = async () => {
-  const res = await fetch('http://localhost:3000/api/categories');
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const res = await fetch(`http://${context.req.headers.host}/api/categories`);
   const categories: Category[] = await res.json();
 
   return {
